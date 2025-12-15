@@ -1,1 +1,48 @@
-node_modules
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# env files
+.env
+.env.local
+
+# Build
+client/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dependencies
+node_modules/
+
+# env files
+.env
+server/.env
+node_modules/
+.env.local
+.env.production
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# build
+client/build/
+dist/
+
+# OS
+.DS_Store
