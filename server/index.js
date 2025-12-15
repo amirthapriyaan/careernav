@@ -18,7 +18,12 @@ app.get("/", (req, res) => {
   res.send("CareerNav Backend is running 🚀");
 });
 
-
+app.get("/api/health", (req, res) => {
+  res.json({
+    status: "ok",
+    message: "CareerNav API running"
+  });
+});
 /* safely load route files */
 function safeRequireRoute(relPath) {
   try {

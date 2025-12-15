@@ -58,6 +58,7 @@ export default function ProfilePage() {
   };
 
   return (
+    
     <div className="profile-wrap page-enter" >
       <div className="profile-inner">
         {/* Header */}

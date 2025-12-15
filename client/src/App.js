@@ -20,7 +20,7 @@ import "./App.css";
  */
 function PageContent({ children }) {
   return (
-    <div className="app-main" style={{ width: "100%", boxSizing: "border-box",    }}>
+    <div className="app-main" style={{ width: "100%", boxSizing: "border-box",}}>
       <div
         className="page-content"
     style={{
