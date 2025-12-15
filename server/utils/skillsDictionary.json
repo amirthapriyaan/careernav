@@ -1,0 +1,10 @@
+{
+  "programming": ["javascript", "java", "python", "c++", "typescript"],
+  "web": ["html", "css", "react", "node", "express", "redux"],
+  "backend": ["node.js", "express.js", "rest", "mongodb", "sql", "mysql", "postgresql"],
+  "cloud": ["aws", "gcp", "azure"],
+  "devops": ["docker", "kubernetes", "jenkins", "ci/cd", "github actions"],
+  "data": ["pandas", "numpy", "scikit-learn", "tensorflow", "pytorch"],
+  "tools": ["git", "github", "jira", "postman", "vs code"],
+  "softSkills": ["communication", "teamwork", "leadership", "problem solving"]
+}

@@ -1,0 +1,320 @@
+/* ===============================
+   PAGE
+================================ */
+.rm-page {
+  padding: 1.6rem;
+  max-width:1200px;
+  margin: 0 auto 16px auto;
+background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.18),
+    rgba(96,165,250,0.16)
+  );
+  color: #0f1724;
+  font-family: Inter, system-ui, sans-serif;
+  border-radius: 10px;
+  margin-top: 30px;
+   box-shadow: 0 -12px 30px rgba(124,58,237,0.12);
+   border-radius: 24px;
+}
+
+:root[data-theme="dark"] .rm-page {
+  background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.18),
+    rgba(96,165,250,0.16)
+  );
+}
+:root[data-theme="dark"] .roadmap-shell {
+  background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.18),
+    rgba(96,165,250,0.16)
+  );
+}
+:root[data-theme="dark"] .rm-header h1{
+  color: ivory;
+}
+:root[data-theme="dark"] .rm-header p{
+  color: white;
+}
+/* ===============================
+   HEADER
+================================ */
+.rm-header h1 {
+  font-size: 1.95rem;
+  margin: 0;
+  font-weight: 800;
+  color: #0f1724; /* black authority */
+}
+
+.rm-header h1 span {
+  color: #7c3aed; /* brand emphasis if needed */
+}
+
+.rm-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   TOOLBAR
+================================ */
+.rm-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 18px 0;
+  align-items: center;
+}
+
+.rm-add input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(124,58,237,0.25);
+}
+
+/* ===============================
+   BUTTONS (BLACK + PURPLE)
+================================ */
+.rm-page .btn {
+  background: #0f1724; /* black primary */
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.rm-page .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(15,23,42,0.35);
+}
+
+.rm-page .btn.primary {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.rm-page .btn.ghost {
+  background: transparent;
+  color: #7c3aed;
+  border: 1px solid rgba(124,58,237,0.35);
+}
+
+.rm-page .btn.danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.rm-page .btn.small {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}
+
+/* ===============================
+   SELECT / DROPDOWN
+================================ */
+.rm-page select {
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid rgba(124,58,237,0.3);
+  padding: 7px 32px 7px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #0f1724;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #6b7280 50%),
+    linear-gradient(135deg, #6b7280 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 55%,
+    calc(100% - 12px) 55%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.rm-page select:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.25);
+}
+
+/* ===============================
+   GRID
+================================ */
+.rm-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .rm-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+.rm-card {
+  position: relative;
+  background:
+    linear-gradient(180deg, #ffffff, #faf9ff),
+    linear-gradient(
+      135deg,
+      rgba(124,58,237,0.14),
+      rgba(14,165,164,0.08),
+      rgba(16,185,129,0.08),
+      rgba(245,158,11,0.08)
+    );
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 18px 42px rgba(76,29,149,0.18);
+  border-left: 5px solid #7c3aed;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+.rm-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rm-skill {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f1724;
+}
+
+.rm-section-title {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #0f1724;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.rm-resources a {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rm-resources a:hover {
+  color: #0ea5a4;
+  text-decoration: underline;
+}
+.rm-add {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  max-width: 540px;
+}
+
+.rm-add input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+.rm-project {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(124,58,237,0.14),
+      rgba(14,165,164,0.10)
+    );
+  padding: 12px;
+  border-radius: 12px;
+  color: #4c1d95;
+  font-size: 0.9rem;
+}
+
+
+.rm-card select[value="done"] {
+  border-color: #10b981;
+  background-color: rgba(16,185,129,0.14);
+}
+
+.rm-card select[value="in-progress"] {
+  border-color: #f59e0b;
+  background-color: rgba(245,158,11,0.14);
+}
+
+
+.rm-empty {
+  padding: 26px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 2px dashed rgba(124,58,237,0.35);
+  color: #6b7280;
+  text-align: center;
+}
+
+.rm-loading {
+  padding: 50px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.cc-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.cc-success { background: #10b981; }
+.cc-error { background: #ef4444; }
+.cc-info  { background: linear-gradient(135deg, #7c3aed, #0ea5a4); }
+
+:root[data-theme="dark"] .rm-card {
+  background:
+    linear-gradient(180deg, #0b1220, #020617),
+    linear-gradient(
+      135deg,
+      rgba(139,92,246,0.22),
+      rgba(45,212,191,0.12),
+      rgba(16,185,129,0.12),
+      rgba(245,158,11,0.10)
+    );
+  border-left-color: #8b5cf6;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+}
+
+:root[data-theme="dark"] .rm-skill,
+:root[data-theme="dark"] .rm-section-title {
+  color: #f3f4f6;
+}
+
+:root[data-theme="dark"] .rm-project {
+  background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.25),
+    rgba(45,212,191,0.18)
+  );
+  color: #e9d5ff;
+}
+
+:root[data-theme="dark"] .rm-resources a {
+  color: #c4b5fd;
+}
+
+:root[data-theme="dark"] select {
+  background-color: #020617;
+  color: #e5e7eb;
+  border-color: rgba(139,92,246,0.45);
+}

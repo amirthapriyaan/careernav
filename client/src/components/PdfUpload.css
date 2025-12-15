@@ -1,0 +1,126 @@
+/* pdf upload root */
+.pdf-upload-root {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* dropzone */
+.pdf-dropzone {
+  width: 100%;
+  min-height: 110px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 2px dashed #e5e7eb;
+  border-radius: 10px;
+  transition: border-color .15s ease, background .15s ease, transform .08s ease, box-shadow .12s ease;
+  box-sizing: border-box;
+}
+
+/* drag active */
+.pdf-dropzone--active {
+  border-color: #2563eb;
+  background: #f8fbff;
+  box-shadow: 0 8px 24px rgba(37,99,235,0.08);
+  transform: translateY(-2px);
+}
+
+/* inner layout */
+.pdf-dropzone-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+/* icon */
+.pdf-icon {
+  width: 56px;
+  height: 56px;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* text */
+.pdf-meta {
+  flex: 1;
+  min-width: 0;
+}
+.pdf-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.1;
+}
+.pdf-sub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6b7280;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* action */
+.pdf-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* spinner */
+.pdf-spinner {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid rgba(0,0,0,0.08);
+  border-top-color: #2563eb;
+  animation: spin .9s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* toast */
+.pdf-toast {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  padding: 8px 12px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 13px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.12);
+  z-index: 50;
+}
+
+/* error */
+.pdf-error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+  .pdf-dropzone {
+    min-height: 100px;
+    padding: 12px;
+  }
+  .pdf-sub {
+    white-space: normal;
+  }
+}

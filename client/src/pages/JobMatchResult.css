@@ -1,0 +1,323 @@
+/* page shell */
+.jmr-page {
+  max-width: 1100px;
+  margin: 20px auto 30px;
+  padding: 50px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(124,58,237,0.18),
+    rgba(37,99,235,0.14),
+    rgba(56,77,167,0.95)
+  );
+  box-shadow:
+    0 10px 10px rgba(0,0,0,0.55),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+/* header */
+.jmr-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.jmr-header p {
+  color: #6b7280;
+}
+
+/* top layout */
+.jmr-top {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  margin: 28px 0;
+}
+
+/* score card */
+.jmr-score-card {
+  background: linear-gradient(180deg,#fff,#f8f7ff);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+}
+
+.jmr-score-ring {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
+
+.jmr-score-inner {
+  width: 135px;
+  height: 135px;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.jmr-score {
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.jmr-score-sub,
+.jmr-muted {
+  color: #6b7280;
+}
+
+.jmr-level {
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+/* summary */
+.jmr-summary-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+}
+
+.jmr-tip {
+  margin-top: 18px;
+  padding: 14px;
+  border-left: 4px solid #6366f1;
+  background: #eef2ff;
+  border-radius: 10px;
+}
+
+.jmr-tip strong {
+  font-weight: 800;
+}
+
+/* grid */
+.jmr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.jmr-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+}
+
+/* details grid */
+.jmr-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.jmr-detail-cell {
+  background: linear-gradient(180deg,#fff,#fafafa);
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.jmr-detail-cell h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* pills */
+.jmr-pill-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jmr-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.jmr-pill-must { background:#fff7ed; color:#92400e; }
+.jmr-pill-good { background:#eef2ff; color:#3730a3; }
+.jmr-pill-strong { background:#ecfdf5; color:#065f46; }
+.jmr-pill-gap { background:#fef2f2; color:#991b1b; }
+
+/* ATS card */
+.jmr-ats {
+  margin-top: 28px;
+  background: linear-gradient(180deg,#fff,#fafafa);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+}
+
+.jmr-ats-body {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ATS ring (single source of truth) */
+.jmr-ats-ring {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(
+    #60a5fa calc(var(--ats-pct) * 3.6deg),
+    rgba(96,165,250,0.18) 0deg
+  );
+}
+
+.jmr-ats-inner {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #020617;
+  display: grid;
+  place-items: center;
+}
+
+.jmr-ats-value {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.jmr-ats-sub {
+  font-size: 0.75rem;
+  color: #c7d2fe;
+}
+
+/* dark theme */
+:root[data-theme="dark"] .jmr-page {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(124,58,237,0.18), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(37,99,235,0.16), transparent 45%),
+    #020617;
+  color: #e5e7eb;
+}
+
+:root[data-theme="dark"] .jmr-card,
+:root[data-theme="dark"] .jmr-summary-card,
+:root[data-theme="dark"] .jmr-score-card,
+:root[data-theme="dark"] .jmr-ats {
+  background: linear-gradient(180deg,#0b1220,#020617);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+}
+
+:root[data-theme="dark"] .jmr-detail-cell {
+  background: linear-gradient(180deg,#0b1220,#020617);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 900px) {
+  .jmr-top,
+  .jmr-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .jmr-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* text color normalization */
+:root[data-theme="dark"] .jmr-page,
+:root[data-theme="dark"] .jmr-page p,
+:root[data-theme="dark"] .jmr-page li,
+:root[data-theme="dark"] .jmr-page span {
+  color: #f5f5eb; /* ivory */
+}
+
+/* headers */
+:root[data-theme="dark"] .jmr-header h1,
+:root[data-theme="dark"] .jmr-card h3,
+:root[data-theme="dark"] .jmr-summary-card h3 {
+  color: #ffffff;
+}
+
+/* muted text */
+:root[data-theme="dark"] .jmr-muted,
+:root[data-theme="dark"] .jmr-score-sub {
+  color: #c7d2fe;
+}
+
+/* score card inner circle */
+:root[data-theme="dark"] .jmr-score-inner {
+  background: #020617;
+}
+
+/* score number */
+:root[data-theme="dark"] .jmr-score {
+  color: #ffffff;
+}
+
+/* level text */
+:root[data-theme="dark"] .jmr-level {
+  color: #c4b5fd;
+}
+
+/* summary explanation */
+:root[data-theme="dark"] .jmr-summary-card p {
+  color: #e5e7eb;
+}
+
+/* FIX: actionable tip visibility */
+:root[data-theme="dark"] .jmr-tip {
+  background: rgba(124,58,237,0.18);
+  border-left-color: #7c3aed;
+}
+
+:root[data-theme="dark"] .jmr-tip strong {
+  color: #e9d5ff;
+}
+
+:root[data-theme="dark"] .jmr-tip p {
+  color: #f5f5eb;
+}
+
+/* details cell headings */
+:root[data-theme="dark"] .jmr-detail-cell h4 {
+  color: #e9d5ff;
+}
+
+/* pills — dark tuning */
+:root[data-theme="dark"] .jmr-pill-must {
+  background: rgba(245,158,11,0.18);
+  color: #fde68a;
+}
+
+:root[data-theme="dark"] .jmr-pill-good {
+  background: rgba(99,102,241,0.18);
+  color: #c7d2fe;
+}
+
+:root[data-theme="dark"] .jmr-pill-strong {
+  background: rgba(16,185,129,0.18);
+  color: #6ee7b7;
+}
+
+:root[data-theme="dark"] .jmr-pill-gap {
+  background: rgba(239,68,68,0.18);
+  color: #fecaca;
+}
+
+/* ATS text */
+:root[data-theme="dark"] .jmr-ats p,
+:root[data-theme="dark"] .jmr-ats li {
+  color: #e5e7eb;
+}

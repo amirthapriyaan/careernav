@@ -1,0 +1,210 @@
+/* theme tokens */
+:root {
+  --bg: #fbf8f4;
+  --panel: #fffaf6;
+  --muted: #6b7280;
+  --text: #0f1724;
+
+  --primary: #6d28d9;
+  --primary-600: #7c3aed;
+  --secondary: #2563eb;
+  --accent: #d97706;
+
+  --card-radius: 12px;
+  --shadow: 0 8px 26px rgba(15,23,42,0.06);
+  --max-width: 1100px;
+  --transition: 180ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* page wrapper */
+.jm-page {
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+   background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.18),
+    rgba(96,165,250,0.16)
+  );
+}
+
+/* page shell */
+.page-shell.jobmatch-shell {
+  width: 100%;
+  max-width: 1100px;
+  padding: 2.5rem 2.5rem 3.25rem;
+  border-radius: 24px;
+ background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.18),
+    rgba(96,165,250,0.16)
+  );
+  box-shadow: 0 22px 55px rgba(15,23,42,0.08);
+}
+
+:root[data-theme="dark"] .page-shell.jobmatch-shell {
+  background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.18),
+    rgba(96,165,250,0.16)
+  );
+}
+
+/* inner content */
+.jm-shell {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* header */
+.jm-header {
+  margin-bottom: 1.6rem;
+}
+
+.jm-header h1 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.jm-subtitle {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* grid */
+.jm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+/* cards */
+.jm-card {
+  background: var(--panel);
+  border-radius: var(--card-radius);
+  padding: 1.1rem;
+  border: 1px solid rgba(0,0,0,0.03);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+
+.jm-card:hover {
+  transform: translateY(-3px);
+}
+
+.jm-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+.jm-card-header h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.jm-hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* textarea */
+.jm-textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.jm-textarea:focus {
+  outline: none;
+  border-color: rgba(124,58,237,0.35);
+}
+
+/* pdf upload buttons */
+.jm-card label,
+.jm-card .pdf-upload-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(124,58,237,0.08),
+    rgba(37,99,235,0.06)
+  );
+  color: var(--primary);
+  border: 1px solid rgba(124,58,237,0.25);
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.jm-card label:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(124,58,237,0.16),
+    rgba(37,99,235,0.12)
+  );
+}
+
+:root[data-theme="dark"] .jm-card label,
+:root[data-theme="dark"] .jm-card .pdf-upload-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(139,92,246,0.18),
+    rgba(96,165,250,0.14)
+  );
+  color: #e5e7eb;
+  border: 1px solid rgba(139,92,246,0.35);
+}
+
+/* actions */
+.jm-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1.4rem;
+}
+
+.jm-error {
+  background: #fff5f5;
+  color: #b91c1c;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+}
+
+/* buttons */
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary-600), var(--primary));
+  color: #fff;
+  padding: 0.65rem 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(124,58,237,0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+:root[data-theme="dark"] .jm-actions .btn-primary {
+  background: linear-gradient(90deg, #7c3aed, #2563eb);
+  box-shadow: 0 14px 36px rgba(139,92,246,0.35);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .jm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell.jobmatch-shell {
+    padding: 1.8rem 1.4rem 2.4rem;
+  }
+}

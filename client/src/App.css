@@ -1,0 +1,42 @@
+.app-main {
+  width: 100%;
+  box-sizing: border-box;
+
+  /* 🌫️ Neutral premium canvas */
+  background:
+    radial-gradient(circle at 20% 0%, rgba(109,40,217,0.06), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(37,99,235,0.06), transparent 45%),
+    linear-gradient(
+      180deg,
+      #fbf8f4 0%,
+      #f9fafb 60%,
+      #ffffff 100%
+    );
+}
+:root[data-theme="dark"] .app-main {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(139,92,246,0.10), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(96,165,250,0.10), transparent 45%),
+    linear-gradient(
+      180deg,
+      #020617 0%,
+      #020617 100%
+    );
+}
+/* =========================================================
+   DARK MODE TOKENS
+========================================================= */
+
+:root[data-theme="dark"] {
+  --bg: #0b0f19;          /* app background */
+  --panel: #111827;      /* cards */
+  --text: #e5e7eb;       /* primary text */
+  --muted: #9ca3af;
+
+  --primary: #8b5cf6;    /* purple */
+  --secondary: #60a5fa;  /* blue */
+  --accent: #f59e0b;     /* gold */
+
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+   background: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(96, 165, 250, 0.16));
+}

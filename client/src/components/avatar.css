@@ -1,0 +1,27 @@
+/* avatar base */
+.avatar {
+ background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #3c13ad,
+    #e791dc
+  );
+  color: #ffffff;
+  font-weight: 700;
+  user-select: none;
+  box-shadow: 0 6px 18px rgba(14, 165, 164, 0.12);
+}
+
+/* avatar with initials */
+.avatar--initials {
+  letter-spacing: 0.6px;
+}
+
+/* avatar image */
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+}
