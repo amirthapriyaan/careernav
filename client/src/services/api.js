@@ -1,6 +1,7 @@
 
 import axios from "axios";
 
+console.log(process.env.REACT_APP_API_URL);
 
 const api = axios.create({
   baseURL:
@@ -9,7 +10,6 @@ const api = axios.create({
   timeout: 30000,
 });
 
-export default api;
 
 
 
