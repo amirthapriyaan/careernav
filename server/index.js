@@ -14,12 +14,10 @@ app.use(cors());
 app.use(express.json());
 
 /* health check */
-app.get("/api/health", (req, res) => {
-  res.json({
-    status: "ok",
-    message: "Career Compass API running",
-  });
+app.get("/", (req, res) => {
+  res.send("CareerNav Backend is running 🚀");
 });
+
 
 /* safely load route files */
 function safeRequireRoute(relPath) {
