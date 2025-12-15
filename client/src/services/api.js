@@ -1,11 +1,16 @@
 
 import axios from "axios";
 
+
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:5000/api",
-  
-  timeout: 30_000,
+  baseURL:
+    process.env.REACT_APP_API_URL ||
+    "http://localhost:5000/api", // local dev fallback only
+  timeout: 30000,
 });
+
+export default api;
+
 
 
 
