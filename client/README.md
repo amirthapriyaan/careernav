@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# 🎯 Career Compass – Job & Career Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Overview
 
-## Available Scripts
+**Career Compass** is an AI-powered job and career assistant designed to help college students evaluate their readiness for specific job roles and receive actionable guidance to strengthen their applications.
 
-In the project directory, you can run:
+Students often struggle to understand whether they qualify for a role and what skills they are missing. This application bridges that gap by analyzing job descriptions and resumes using generative AI, providing match scores, gap analysis, and personalized recommendations.
 
-### `npm start`
+This project is developed as a **Proof-of-Concept (POC)** to demonstrate the ability to learn, design, and build an AI-assisted application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Key Features
 
-### `npm test`
+- 📄 **Job Description & Resume Analysis**
+  - Paste a job description
+  - Upload or paste resume text (PDF supported)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 📊 **Job Match Scoring**
+  - Visual readiness score (e.g., *Strong Match – 8/10*)
+  - Clear indication of overall fit
 
-### `npm run build`
+- 🧠 **Skill Gap Analysis**
+  - Identifies missing or weak skills
+  - Highlights strengths already present in the resume
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 🎯 **Actionable Recommendations**
+  - Provides one concrete, personalized improvement tip per analysis
+  - Option to add missing skills directly to a learning roadmap
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 💬 **AI Career Q&A Chat**
+  - Ask natural language questions such as:
+    - *“Am I ready for frontend developer roles?”*
+    - *“What skills should I learn for data science?”*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🗺️ **Personal Learning Roadmap**
+  - Track skill gaps and learning progress
+  - Visual progress indicators
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧠 AI & Conceptual Design
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This application leverages **Generative AI** to perform reasoning over:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Job descriptions
+- Resume content
+- User career-related queries
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The system follows a **lightweight Retrieval-Augmented Generation (RAG)-style approach**, where relevant resume and job description context is injected into the AI prompt to generate accurate, personalized insights.
 
-## Learn More
+> **Note:** This POC focuses on prompt-based intelligence. The architecture can be extended to use vector embeddings and document retrieval systems (e.g., LangChain / LlamaIndex) for advanced semantic matching.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Tech Stack
 
-### Code Splitting
+### Frontend
+- React.js
+- CSS (custom design system)
+- Deployed on **Vercel**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Backend
+- Node.js
+- Express.js
+- OpenAI / LLM-based APIs
+- Deployed on **Render**
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⚙️ Setup Instructions
 
-### Making a Progressive Web App
+### 🔹 Backend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Clone the repository
+2. Navigate to the backend directory:
+   ```bash
+   cd server
+3. Install dependencies:
 
-### Advanced Configuration
+   npm install
+4. Create a .env file and add required variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    OPENAI_API_KEY=your_openai_key
+    DATABASE_URL=your_database_url (if applicable)
+5. Start the backend server:
 
-### Deployment
+    npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+    The backend will run by default at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    http://localhost:5000
+🔹 Frontend Setup
+
+1. Navigate to the frontend directory:
+
+cd client
+
+
+2. Install dependencies:
+
+npm install
+
+
+3. Run the application locally:
+
+npm start
+
+
+4. OR build for production:
+
+npm run build
+
+🌍 Environment Variables
+1. Frontend (Vercel)
+
+Set the following environment variable in Vercel Dashboard → Project Settings → Environment Variables:
+
+REACT_APP_API_URL=https://careernav.onrender.com/api
+
+
+2. Apply the variable to Production, Preview, and Development environments, then redeploy the project.
