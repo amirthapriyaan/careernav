@@ -57,10 +57,12 @@ body {
   min-height: 100%;
   padding-bottom: 40px;
   margin-top: 40px;
-  background-color: #1f204b;
+  /* background-color: #1f204b; */
    
 }
-
+:root[data-theme="dark"] .profile-wrap {
+  background: #1f204b;
+}
 .profile-inner {
   max-width: var(--max-content);
   margin: 0 auto;
