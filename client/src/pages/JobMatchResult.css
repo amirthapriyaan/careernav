@@ -201,9 +201,7 @@
 /* dark theme */
 :root[data-theme="dark"] .jmr-page {
   background:
-    radial-gradient(circle at 15% 10%, rgba(124,58,237,0.18), transparent 40%),
-    radial-gradient(circle at 85% 20%, rgba(37,99,235,0.16), transparent 45%),
-    #020617;
+    #31326d;
   color: #e5e7eb;
 }
 

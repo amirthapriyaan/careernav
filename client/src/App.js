@@ -138,7 +138,7 @@ function RouterWrapper() {
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="App" style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <div className="App">
         <Navbar />
         <ThoughtFor21s />
         <RouterWrapper />

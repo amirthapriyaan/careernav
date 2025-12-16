@@ -1,17 +1,51 @@
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
 .app-main {
   width: 100%;
   box-sizing: border-box;
+  flex: 1;             
+}
+/* App-level background */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-  /* 🌫️ Neutral premium canvas */
-  background:
-    radial-gradient(circle at 20% 0%, rgba(109,40,217,0.06), transparent 45%),
-    radial-gradient(circle at 80% 20%, rgba(37,99,235,0.06), transparent 45%),
-    linear-gradient(
-      180deg,
-      #fbf8f4 0%,
-      #f9fafb 60%,
-      #ffffff 100%
-    );
+ background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.18),
+    rgba(96,165,250,0.16)
+  );
+}
+html, body, #root {
+  min-height: 100%;
+}
+.App {
+  min-height: 100vh;
+
+}
+.page-shell {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  padding: clamp(20px, 3vw, 32px);
+
+  border-radius: 22px;
+  background: var(--panel);
+  box-shadow: 0 20px 50px rgba(15,23,42,0.08);
+}
+
+/* Dark mode */
+:root[data-theme="dark"] .page-shell {
+  
+  box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+}
+:root[data-theme="dark"] .App{
+   background: #1f204b;
 }
 :root[data-theme="dark"] .app-main {
   background:
@@ -23,9 +57,7 @@
       #020617 100%
     );
 }
-/* =========================================================
-   DARK MODE TOKENS
-========================================================= */
+
 
 :root[data-theme="dark"] {
   --bg: #0b0f19;          /* app background */

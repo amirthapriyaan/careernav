@@ -27,7 +27,7 @@
 
 html, body, #root {
   height: 100%;
-  background: transparent;
+  
 }
 body { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; margin:0; }
 h1,h2,h3,h4 { font-family: "Poppins", system-ui, sans-serif; }
@@ -40,9 +40,9 @@ button { font-family: inherit; }
 }
 
 .page-content {
-  max-width: 960px;        /* what's currently used */
+  max-width: 1200px;          /* single source of truth */
   margin: 0 auto;
+  padding: 24px clamp(16px, 6vw, 28px) 40px;
   box-sizing: border-box;
-  padding-left: clamp(16px, 6vw, 28px);
-  padding-right: clamp(16px, 6vw, 28px);
+  background: transparent;    /* IMPORTANT */
 }

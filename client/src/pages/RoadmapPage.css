@@ -1,60 +1,48 @@
 /* ===============================
-   PAGE
+   ROADMAP PAGE SHELL
 ================================ */
 .rm-page {
   padding: 1.6rem;
-  max-width:1200px;
-  margin: 0 auto 16px auto;
-background: linear-gradient(
-    135deg,
-    rgba(139,92,246,0.18),
-    rgba(96,165,250,0.16)
-  );
-  color: #0f1724;
-  font-family: Inter, system-ui, sans-serif;
-  border-radius: 10px;
-  margin-top: 30px;
-   box-shadow: 0 -12px 30px rgba(124,58,237,0.12);
-   border-radius: 24px;
+  margin: 40px auto 24px;
+  border-radius: 24px;
+  max-width: 1200px;
+
+  background: #1f204b;
+  box-shadow: 0 18px 42px rgba(76,29,149,0.18);
 }
 
+/* 🌙 Dark mode shell — LIGHTER */
 :root[data-theme="dark"] .rm-page {
-  background: linear-gradient(
-    135deg,
-    rgba(139,92,246,0.18),
-    rgba(96,165,250,0.16)
-  );
+  background: #31326d;              /* slate-900 */
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
 }
-:root[data-theme="dark"] .roadmap-shell {
-  background: linear-gradient(
-    135deg,
-    rgba(139,92,246,0.18),
-    rgba(96,165,250,0.16)
-  );
+
+/* Page spacing */
+.page-content {
+  padding-top: 24px;
+  padding-bottom: 40px;
 }
-:root[data-theme="dark"] .rm-header h1{
-  color: ivory;
-}
-:root[data-theme="dark"] .rm-header p{
-  color: white;
-}
+
 /* ===============================
    HEADER
 ================================ */
 .rm-header h1 {
   font-size: 1.95rem;
-  margin: 0;
   font-weight: 800;
-  color: #0f1724; /* black authority */
+  color: #0f1724;
 }
 
-.rm-header h1 span {
-  color: #7c3aed; /* brand emphasis if needed */
+:root[data-theme="dark"] .rm-header h1 {
+  color: #f9fafb;
 }
 
 .rm-subtitle {
   color: #6b7280;
   font-size: 0.95rem;
+}
+
+:root[data-theme="dark"] .rm-subtitle {
+  color: #cbd5f5;
 }
 
 /* ===============================
@@ -68,17 +56,26 @@ background: linear-gradient(
   align-items: center;
 }
 
+.rm-add {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  max-width: 540px;
+}
+
 .rm-add input {
+  flex: 1;
   padding: 10px 12px;
   border-radius: 12px;
   border: 1px solid rgba(124,58,237,0.25);
+  font-size: 0.95rem;
 }
 
 /* ===============================
-   BUTTONS (BLACK + PURPLE)
+   BUTTONS
 ================================ */
 .rm-page .btn {
-  background: #0f1724; /* black primary */
+  background: #0f1724;
   color: #ffffff;
   border: none;
   padding: 10px 16px;
@@ -86,7 +83,6 @@ background: linear-gradient(
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  margin-right: 10px;
   margin-left: 10px;
 }
 
@@ -96,13 +92,13 @@ background: linear-gradient(
 }
 
 .rm-page .btn.primary {
-  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
 }
 
 .rm-page .btn.ghost {
   background: transparent;
-  color: #7c3aed;
-  border: 1px solid rgba(124,58,237,0.35);
+  color: #a78bfa;
+  border: 1px solid rgba(167,139,250,0.45);
 }
 
 .rm-page .btn.danger {
@@ -115,7 +111,7 @@ background: linear-gradient(
 }
 
 /* ===============================
-   SELECT / DROPDOWN
+   SELECT
 ================================ */
 .rm-page select {
   appearance: none;
@@ -126,21 +122,12 @@ background: linear-gradient(
   font-size: 0.85rem;
   cursor: pointer;
   color: #0f1724;
-
-  background-image:
-    linear-gradient(45deg, transparent 50%, #6b7280 50%),
-    linear-gradient(135deg, #6b7280 50%, transparent 50%);
-  background-position:
-    calc(100% - 18px) 55%,
-    calc(100% - 12px) 55%;
-  background-size: 6px 6px;
-  background-repeat: no-repeat;
 }
 
-.rm-page select:focus {
-  outline: none;
-  border-color: #7c3aed;
-  box-shadow: 0 0 0 3px rgba(124,58,237,0.25);
+:root[data-theme="dark"] .rm-page select {
+  background-color: #020617;
+  color: #e5e7eb;
+  border-color: rgba(139,92,246,0.45);
 }
 
 /* ===============================
@@ -158,9 +145,13 @@ background: linear-gradient(
   }
 }
 
-
+/* ===============================
+   ROADMAP CARD
+================================ */
 .rm-card {
-  position: relative;
+  padding: 18px;
+  border-radius: 18px;
+
   background:
     linear-gradient(180deg, #ffffff, #faf9ff),
     linear-gradient(
@@ -170,15 +161,26 @@ background: linear-gradient(
       rgba(16,185,129,0.08),
       rgba(245,158,11,0.08)
     );
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 18px 42px rgba(76,29,149,0.18);
+
   border-left: 5px solid #7c3aed;
+  box-shadow: 0 18px 42px rgba(76,29,149,0.18);
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
+/* 🌙 Dark mode cards — CLEARLY LIGHTER */
+:root[data-theme="dark"] .rm-card {
+  background:
+    linear-gradient(180deg, #1f2933, #111827),
+    linear-gradient(
+      135deg,
+      rgba(139,92,246,0.18),
+      rgba(45,212,191,0.10)
+    );
+  border-left-color: #a78bfa;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
 
 .rm-card-top {
   display: flex;
@@ -187,19 +189,28 @@ background: linear-gradient(
 }
 
 .rm-skill {
-  margin: 0;
   font-size: 1.15rem;
   font-weight: 700;
   color: #0f1724;
 }
 
+:root[data-theme="dark"] .rm-skill {
+  color: #f9fafb;
+}
+
+/* ===============================
+   CARD CONTENT
+================================ */
 .rm-section-title {
-  font-weight: 700;
   font-size: 0.78rem;
+  font-weight: 700;
   color: #0f1724;
-  margin-bottom: 6px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+:root[data-theme="dark"] .rm-section-title {
+  color: #e5e7eb;
 }
 
 .rm-resources a {
@@ -209,37 +220,32 @@ background: linear-gradient(
 }
 
 .rm-resources a:hover {
-  color: #0ea5a4;
-  text-decoration: underline;
-}
-.rm-add {
-  display: flex;
-  gap: 10px;
-  flex: 1;
-  max-width: 540px;
+  color: #22d3ee;
 }
 
-.rm-add input {
-  flex: 1;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  font-size: 0.95rem;
-}
 .rm-project {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(124,58,237,0.14),
-      rgba(14,165,164,0.10)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(124,58,237,0.14),
+    rgba(14,165,164,0.10)
+  );
   padding: 12px;
   border-radius: 12px;
   color: #4c1d95;
-  font-size: 0.9rem;
 }
 
+:root[data-theme="dark"] .rm-project {
+  background: linear-gradient(
+    135deg,
+    rgba(139,92,246,0.25),
+    rgba(45,212,191,0.18)
+  );
+  color: #e9d5ff;
+}
 
+/* ===============================
+   STATES
+================================ */
 .rm-card select[value="done"] {
   border-color: #10b981;
   background-color: rgba(16,185,129,0.14);
@@ -250,7 +256,9 @@ background: linear-gradient(
   background-color: rgba(245,158,11,0.14);
 }
 
-
+/* ===============================
+   EMPTY / LOADING
+================================ */
 .rm-empty {
   padding: 26px;
   background: #ffffff;
@@ -260,12 +268,14 @@ background: linear-gradient(
   text-align: center;
 }
 
-.rm-loading {
-  padding: 50px;
-  text-align: center;
-  color: #6b7280;
+:root[data-theme="dark"] .rm-empty {
+  background: #020617;
+  color: #cbd5f5;
 }
 
+/* ===============================
+   TOAST
+================================ */
 .cc-toast {
   position: fixed;
   bottom: 24px;
@@ -278,43 +288,5 @@ background: linear-gradient(
 }
 
 .cc-success { background: #10b981; }
-.cc-error { background: #ef4444; }
-.cc-info  { background: linear-gradient(135deg, #7c3aed, #0ea5a4); }
-
-:root[data-theme="dark"] .rm-card {
-  background:
-    linear-gradient(180deg, #0b1220, #020617),
-    linear-gradient(
-      135deg,
-      rgba(139,92,246,0.22),
-      rgba(45,212,191,0.12),
-      rgba(16,185,129,0.12),
-      rgba(245,158,11,0.10)
-    );
-  border-left-color: #8b5cf6;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
-}
-
-:root[data-theme="dark"] .rm-skill,
-:root[data-theme="dark"] .rm-section-title {
-  color: #f3f4f6;
-}
-
-:root[data-theme="dark"] .rm-project {
-  background: linear-gradient(
-    135deg,
-    rgba(139,92,246,0.25),
-    rgba(45,212,191,0.18)
-  );
-  color: #e9d5ff;
-}
-
-:root[data-theme="dark"] .rm-resources a {
-  color: #c4b5fd;
-}
-
-:root[data-theme="dark"] select {
-  background-color: #020617;
-  color: #e5e7eb;
-  border-color: rgba(139,92,246,0.45);
-}
+.cc-error   { background: #ef4444; }
+.cc-info    { background: linear-gradient(135deg, #7c3aed, #22d3ee); }
